@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JARVIS - AI Voice Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-animation"></div>
+    
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="stars"></div>
+        
+        <div class="hero-content">
+            <h1 class="hero-title">JARVIS</h1>
+            <p class="hero-subtitle">Your Personal AI Voice Assistant</p>
+            
+            <!-- Animated AI Orb -->
+            <div class="ai-orb-container">
+                <div class="ai-orb">
+                    <div class="orb-inner"></div>
+                    <div class="orb-glow"></div>
+                    <div class="orb-pulse"></div>
+                </div>
+                <div class="orb-rings">
+                    <div class="ring ring-1"></div>
+                    <div class="ring ring-2"></div>
+                    <div class="ring ring-3"></div>
+                </div>
+            </div>
+            
+            <!-- Voice Wake Phrase -->
+            <div class="wake-phrase">
+                <span class="microphone-icon">🎤</span>
+                <p class="wake-text">Say <strong>"Hey JARVIS"</strong> to activate</p>
+            </div>
+            
+            <!-- Status Display -->
+            <div class="status-bar">
+                <div class="status-indicator" id="statusIndicator"></div>
+                <span class="status-text" id="statusText">Listening for wake phrase...</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Assistant Interface (Hidden by default) -->
+    <div class="assistant-interface" id="assistantInterface">
+        <div class="interface-background"></div>
+        
+        <div class="interface-header">
+            <div class="header-title">
+                <span class="jarvis-logo">◆ JARVIS ◆</span>
+            </div>
+            <button class="close-btn" id="closeBtn">✕</button>
+        </div>
+        
+        <div class="interface-content">
+            <!-- Active Listening State -->
+            <div class="listening-state" id="listeningState">
+                <div class="listening-orb">
+                    <div class="listening-inner"></div>
+                    <div class="sound-wave"></div>
+                    <div class="sound-wave"></div>
+                    <div class="sound-wave"></div>
+                </div>
+                <p class="greeting-text">Hello, I am JARVIS.<br>How can I help you?</p>
+            </div>
+            
+            <!-- Conversation Display -->
+            <div class="conversation-log" id="conversationLog"></div>
+            
+            <!-- Processing State -->
+            <div class="processing-state" id="processingState" style="display: none;">
+                <div class="processing-spinner">
+                    <div class="spinner-ring"></div>
+                    <div class="spinner-ring"></div>
+                    <div class="spinner-ring"></div>
+                </div>
+                <p>Processing your request...</p>
+            </div>
+        </div>
+        
+        <!-- Transcription Display -->
+        <div class="transcription-area">
+            <div class="transcription-label">You said:</div>
+            <div class="transcription-text" id="transcriptionText">Listening...</div>
+        </div>
+        
+        <!-- Voice Control Buttons -->
+        <div class="control-buttons">
+            <button class="btn-voice" id="startListening" title="Start listening">
+                <span class="btn-icon">🎤</span>
+            </button>
+            <button class="btn-stop" id="stopListening" title="Stop listening" style="display: none;">
+                <span class="btn-icon">⏹</span>
+            </button>
+        </div>
+        
+        <!-- AI Response Area -->
+        <div class="response-area" id="responseArea" style="display: none;">
+            <div class="response-text" id="responseText"></div>
+            <div class="response-controls">
+                <button class="btn-speak" id="speakResponse" title="Speak response">
+                    <span class="btn-icon">🔊</span>
+                </button>
+                <button class="btn-continue" id="continueListening" title="Ask another question">
+                    <span class="btn-icon">➜ Continue</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-spinner">
+            <div class="spinner"></div>
+        </div>
+        <p>Initializing JARVIS...</p>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
